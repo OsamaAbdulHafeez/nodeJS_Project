@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node",
+      "src": "vercel.sh",
+      "use": "@vercel/static-build",
       "config": {
         "command": "./vercel.sh"
       }
