@@ -15,6 +15,7 @@ app.use(express.json())
 app.get("/",(req,res)=>{
     return res.send("Hello World")
 })
+
 app.get('/api/getCollections', async(req,res)=>{
     try {
         const collections = await mongoose.connection.db.listCollections().toArray();
