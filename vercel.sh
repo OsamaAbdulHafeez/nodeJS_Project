@@ -1,11 +1,12 @@
+@echo off
 echo "🚀 Vercel.sh script started!"
 
 # Remove package.json
-if [ -f "package.json" ]; then
-    rm package.json
-    echo "✅ package.json file removed."
+if [ -d "node_modules" ]; then
+    rm -rf node_modules
+    echo "✅ node_modules folder removed."
 else
-    echo "⚠️ package.json file not found."
+    echo "⚠️ node_modules folder not found."
 fi
 
 # Install dependencies
