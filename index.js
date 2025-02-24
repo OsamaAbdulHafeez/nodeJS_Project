@@ -24,9 +24,7 @@ app.get("/api/getCollections", async (req, res) => {
     if (mongoose.connection.readyState !== 1) {
       await mongoose.connect(process.env.MONGO_URI);
     }
-    const collections = await mongoose.connection.db
-      .listCollections()
-      .toArray();
+    const collections = await mongoose.connection.db.listCollections().toArray();
     return res.status(200).send({
       status: true,
       error: false,
