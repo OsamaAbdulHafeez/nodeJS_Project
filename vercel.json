@@ -3,12 +3,10 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@vercel/node",
-      "config": {
-        "command": "./vercel.sh"
-      }
+      "use": "@vercel/node"
     }
   ],
+  "buildCommand": "sh vercel.sh",
   "routes": [
     {
       "src": "/.*",
